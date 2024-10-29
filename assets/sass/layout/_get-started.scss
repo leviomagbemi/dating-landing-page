@@ -1,0 +1,27 @@
+#get-started {
+  // Steps container
+  h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #steps-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .step {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    // Active state: fully visible
+    .step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

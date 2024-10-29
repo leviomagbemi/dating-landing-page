@@ -1,2 +1,13 @@
+// Base styling
 @import "base/config";
 @import "base/utilities";
+
+// Layout styling
+@import "layout/header";
+@import "layout/hero";
+@import "layout/features";
+@import "layout/get-started";
+@import "layout/footer";
+
+// Component Styling
+@import "components/cards";

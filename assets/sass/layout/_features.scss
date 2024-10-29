@@ -1,0 +1,27 @@
+#features {
+  h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  // Features container
+  &-container {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .feature {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    // Active state: fully visible
+    .feature.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

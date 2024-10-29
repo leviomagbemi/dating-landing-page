@@ -1,0 +1,144 @@
+header {
+  padding: 1rem 2rem;
+
+  // Header container
+  #header-container {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // Nav
+    #nav {
+      // padding-left: 1rem;
+      ul {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+      }
+    }
+
+    // Header CTA
+    #header-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+
+      a {
+        background-color: black;
+        color: white;
+        padding: 0.2rem 1rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+// Mobile header
+#mobile-header {
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #000;
+  color: #fff;
+  padding: 3rem 2rem 0 2rem;
+  position: absolute;
+  top: 0;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+
+    #close-menu {
+      background: none;
+
+      span {
+        display: block;
+        background-color: #fff;
+        width: 25px;
+        height: 3px;
+      }
+
+      :first-child {
+        transform: rotate(130deg);
+      }
+
+      :last-child {
+        transform: rotate(30deg);
+      }
+    }
+  }
+
+  #mobile-nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.inactive {
+  right: -100%;
+  opacity: 1;
+  transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+// Active state: fully visible
+.active {
+  opacity: 1;
+  right: 0;
+  transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+// Hamburger Icon
+#hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    padding: 1.5rem;
+
+    #header-container {
+      #nav {
+        display: none;
+      }
+
+      #header-cta a {
+        display: none;
+      }
+
+      #hamburger-menu {
+        display: flex;
+      }
+    }
+  }
+
+  #mobile-header {
+    display: block;
+  }
+}

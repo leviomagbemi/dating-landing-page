@@ -19,51 +19,220 @@
   <body>
     <!--Header-->
     <header>
-      <!--Logo-->
-      <h1>Logo</h1>
+      <div id="header-container">
+        <!--Logo-->
+        <h1>Logo</h1>
 
-      <!--Navigation menu-->
-      <nav>
+        <!--Navigation menu-->
+        <nav id="nav">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#get-started">Getting Started</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!--Download CTA-->
+        <div id="header-cta">
+          <a href="#sign-up">Sign Up</a>
+        </div>
+
+        <!--Hamburger Icon-->
+        <button id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!--Mobile header-->
+    <div id="mobile-header" class="inactive">
+      <div>
+        <h1>logo</h1>
+
+        <div id="close-menu">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!--mobile nav-->
+      <nav id="mobile-nav">
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#features">Features</a></li>
-          <li><a href="#getting-started">Getting Started</a></li>
+          <li><a href="#get-started">Getting Started</a></li>
           <li><a href="#footer">Contact</a></li>
         </ul>
       </nav>
-
-      <!--Download CTA-->
-      <div>
-        <a href="#sign-up">Sign Up</a>
-        <a href="#login">Login</a>
-      </div>
-    </header>
+    </div>
 
     <!--Page main content-->
     <main>
       <!--Hero-->
       <section id="hero">
-        <h1>Find Your Perfect Match</h1>
-        <p>
-          Meet new people and build lasting relationships. Wherever you are,
-          love is just a swipe away. Join millions who’ve found love here!
-        </p>
-        <button>Get it on Google Play</button>
-        <button>Download on the App Store</button>
+        <div id="hero-container">
+          <h1>Find Your Perfect Match</h1>
+          <p>
+            Meet new people and build lasting relationships. Wherever you are,
+            love is just a swipe away. <br />Join millions who’ve found love
+            here!
+          </p>
+
+          <div id="hero-cta">
+            <a href="#">
+              <span class="icon"
+                ><img src="assets/icons/google-play.png" alt=""
+              /></span>
+              Available on Android
+            </a>
+
+            <a href="#">
+              <span class="icon"
+                ><img src="assets/icons/apple.png" alt=""
+              /></span>
+              Available on iOS
+            </a>
+          </div>
+        </div>
       </section>
 
       <!--Features-->
       <section id="features">
-        <h2>Features</h2>
+        <h2>What Makes Us Different</h2>
+
+        <div id="features-container">
+          <!--Feature-->
+          <div class="card feature">
+            <span class="icon"
+              ><img src="/assets/icons/smart-matching.png" alt="Smart Matching"
+            /></span>
+            <h4 class="card-header">Smart Matching</h4>
+            <p>
+              Our advanced matching algorithm suggests people who share your
+              values and interests, helping you connect on a deeper level.
+            </p>
+          </div>
+
+          <!--Feature-->
+          <div class="card feature">
+            <span class="icon"
+              ><img
+                src="/assets/icons/profile-customization.png"
+                alt="Smart Matching"
+            /></span>
+            <h4 class="card-header">Profile Customization</h4>
+            <p>
+              We prioritize your privacy. All your data is secure, and you have
+              control over who sees your profile.
+            </p>
+          </div>
+
+          <!--Feature-->
+          <div class="card feature">
+            <span class="icon"
+              ><img src="/assets/icons/video-chat.png" alt="Video Chat"
+            /></span>
+            <h4 class="card-header">Video Chat</h4>
+            <p>
+              Take conversations to the next level. Start a video chat with your
+              match when you're ready.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <!--getting Started-->
-      <section id="getting-started">
-        <h3>Getting Started</h3>
+      <!--Get Started-->
+      <section id="get-started">
+        <h3>How It Works</h3>
+
+        <div id="steps-container">
+          <!--Step-->
+          <div class="card step">
+            <span class="icon"
+              ><img src="/assets/icons/create-account.png" alt="Smart Matching"
+            /></span>
+            <h4 class="card-header">Create Your Profile</h4>
+            <p>
+              Upload a photo, add your interests, and tell us what you’re
+              looking for. We use this information to help you find meaningful
+              connections.
+            </p>
+          </div>
+
+          <!--Step-->
+          <div class="card step">
+            <span class="icon"
+              ><img src="/assets/icons/browse-match.png" alt="Smart Matching"
+            /></span>
+            <h4 class="card-header">Browse Matches</h4>
+            <p>
+              Swipe through profiles tailored to your preferences and find
+              people who share your interests and values.
+            </p>
+          </div>
+
+          <!--Step-->
+          <div class="card step">
+            <span class="icon"
+              ><img src="/assets/icons/connect.png" alt="Video Chat"
+            /></span>
+            <h4 class="card-header">Start Connecting</h4>
+            <p>
+              Send a message, start a chat, or even schedule a virtual coffee
+              date right from the app!
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
     <!--Footer-->
-    <footer id="footer"></footer>
+    <footer>
+      <div id="footer-container">
+        <!-- Tag Section -->
+        <div class="footer-tag">
+          <h1>Logo</h1>
+          <p>
+            Connecting people and creating lasting <br />relationships around
+            the world.
+          </p>
+          <div class="footer-socials">
+            <a href="#"
+              ><img src="assets/icons/facebook.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="assets/icons/instagram.png" alt="Instagram"
+            /></a>
+            <a href="#"><img src="assets/icons/x.png" alt="X" /></a>
+          </div>
+        </div>
+
+        <!-- Quick Links Section -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#get-started">Get Started</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p>Email: support@example.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+      </div>
+
+      <div id="footer-bottom">
+        <p>&copy; 2024 Your Dating App Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/assets/js/main.js"></script>
   </body>
 </html>

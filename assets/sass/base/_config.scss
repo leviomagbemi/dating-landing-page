@@ -4,7 +4,13 @@
   padding: 0;
   line-height: 1.2;
   text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
 }
 
 // Font stacks
@@ -22,4 +28,27 @@ h4,
 h5,
 h6 {
   font-family: $font-stack-heading;
+}
+
+// Anchor tags
+a {
+  display: block;
+  color: #000;
+}
+
+// Sections
+section:not(#hero) {
+  padding: 3rem 0;
+  max-width: 1170px;
+  margin: auto;
+}
+
+// Images
+img {
+  width: 100%;
+}
+
+// Spans
+span {
+  display: block;
 }

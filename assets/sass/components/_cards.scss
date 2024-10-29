@@ -1,0 +1,27 @@
+// Cards
+.card {
+  text-align: center;
+  max-width: 300px;
+  padding: 1rem;
+  // border-radius: 1rem;
+  // border: 2px solid #000;
+  .card-header {
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    img {
+      width: 30px;
+    }
+  }
+}
