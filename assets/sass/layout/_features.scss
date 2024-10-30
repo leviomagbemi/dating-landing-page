@@ -1,18 +1,8 @@
-#features {
-  h2 {
-    margin-bottom: 2rem;
-    color: $color-text;
-    text-align: center;
-    font-size: 1.5rem;
-  }
+@import "../base/variables";
 
+#features {
   // Features container
   &-container {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-
     .feature {
       opacity: 0;
       transform: translateY(30px);

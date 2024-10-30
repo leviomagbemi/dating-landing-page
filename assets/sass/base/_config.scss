@@ -41,7 +41,7 @@ a {
 
 // Sections
 section:not(#hero) {
-  padding: 3rem 0;
+  padding: $space-xl 0;
   max-width: 1170px;
   margin: auto;
 }

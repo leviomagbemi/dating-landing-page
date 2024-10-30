@@ -1,1 +1,32 @@
 @import "variables";
+
+.section-heading {
+  margin-bottom: $space-lg;
+  color: $color-text;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+%active-mobile-link {
+  background-color: rgba($color: $color-primary, $alpha: 0.5);
+}
+
+%active-link {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.logo {
+  width: 100px;
+}
+
+%mobile-nav-transition {
+  transition: right 0.5s ease, opacity 0.5s ease;
+}

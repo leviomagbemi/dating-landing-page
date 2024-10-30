@@ -1,8 +1,11 @@
+@import "../base/variables";
+
 footer {
-  padding-top: 3rem;
+  padding-top: $space-xl;
   background-color: darken($color-secondary, 40%);
   color: $color-light;
 
+  // Footer container
   #footer-container {
     max-width: 1170px;
     margin: auto;
@@ -13,16 +16,13 @@ footer {
 
     div {
       max-width: 400px;
-      padding: 1rem;
+      padding: $space-md;
     }
 
     // Footer tag
     .footer-tag {
-      .logo {
-        width: 100px;
-      }
       p {
-        margin-bottom: 1rem;
+        margin-bottom: $space-md;
       }
 
       .footer-socials {
@@ -40,7 +40,7 @@ footer {
     // Footer links
     .footer-links {
       h3 {
-        margin-bottom: 1rem;
+        margin-bottom: $space-md;
       }
 
       ul {
@@ -61,11 +61,11 @@ footer {
     // Footer contact
     .footer-contact {
       h3 {
-        margin-bottom: 1rem;
+        margin-bottom: $space-md;
       }
 
       p {
-        margin-bottom: 1rem;
+        margin-bottom: $space-md;
       }
 
       a {
@@ -79,7 +79,7 @@ footer {
   }
 
   #footer-bottom {
-    padding: 3rem 0;
+    padding: $space-xl 0;
     text-align: center;
   }
 }

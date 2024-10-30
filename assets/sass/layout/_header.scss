@@ -1,7 +1,8 @@
 @import "../base/variables";
+@import "../base/utilities";
 
 header {
-  padding: 1rem 2rem;
+  padding: $space-md $space-lg;
   background: transparent;
   position: absolute;
   top: 0;
@@ -20,7 +21,7 @@ header {
       width: 100px;
     }
 
-    // Nav
+    // Main nav
     #nav {
       ul {
         display: flex;
@@ -28,21 +29,19 @@ header {
         justify-content: center;
         background-color: rgba($color: $color-dark, $alpha: 0.3);
 
-        padding: 1rem;
-        border-radius: 1rem;
+        padding: $space-md;
+        border-radius: $radius;
 
         a {
           color: $color-light;
         }
 
         a:hover {
-          font-weight: bold;
-          text-decoration: underline;
+          @extend %active-link;
         }
 
         a.nav-active {
-          font-weight: bold;
-          text-decoration: underline;
+          @extend %active-link;
         }
       }
     }
@@ -50,10 +49,10 @@ header {
     // Header CTA
     #header-cta {
       a {
-        background-color: rgba($color: $color-dark, $alpha: 0.5);
+        background-color: rgba($color: $color-dark, $alpha: 0.3);
         color: white;
-        padding: 0.2rem 1rem;
-        border-radius: 1rem;
+        padding: $space-xs $space-md;
+        border-radius: $radius;
         transform: scale(1);
         transition: transform 0.5s ease;
       }
@@ -65,8 +64,8 @@ header {
   }
 }
 
-// Mobile header
-#mobile-header {
+// Mobile navigation
+#mobile-nav {
   display: none;
   width: 100%;
   height: 100%;
@@ -77,18 +76,15 @@ header {
   position: absolute;
   top: 0;
 
-  > div {
+  #nav-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: $space-lg;
 
-    .logo {
-      width: 100px;
-    }
-
+    // Close(x) icon
     #close-menu {
       background: none;
-      margin-top: 1rem;
+      margin-top: $space-md;
 
       span {
         display: block;
@@ -107,42 +103,26 @@ header {
     }
   }
 
-  #mobile-nav {
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 
-      a {
-        color: #fff;
-        background-color: rgba($color: $color-light, $alpha: 0.3);
-        padding: 1rem;
-        border-radius: $radius;
-      }
+    a {
+      color: $color-light;
+      background-color: rgba($color: $color-light, $alpha: 0.3);
+      padding: 1rem;
+      border-radius: $radius;
+    }
 
-      a:hover {
-        background-color: rgba($color: $color-primary, $alpha: 0.5);
-      }
+    a:hover {
+      @extend %active-mobile-link;
+    }
 
-      a.mobile-nav-active {
-        background-color: rgba($color: $color-primary, $alpha: 0.5);
-      }
+    a.mobile-navlink-active {
+      @extend %active-mobile-link;
     }
   }
-}
-
-// Mobile header state
-.inactive {
-  right: -100%;
-  opacity: 1;
-  transition: right 0.5s ease, opacity 0.5s ease;
-}
-
-// Active state: fully visible
-.active {
-  opacity: 1;
-  right: 0;
-  transition: right 0.5s ease, opacity 0.5s ease;
 }
 
 // Hamburger Icon
@@ -163,10 +143,25 @@ header {
   }
 }
 
+// ===== MOBILE NAVIGATION STATE =====
+// Inactive state: not visible
+.mobile-nav-inactive {
+  right: -100%;
+  opacity: 1;
+  @extend %mobile-nav-transition;
+}
+
+// Active state: fully visible
+.mobile-nav-active {
+  opacity: 1;
+  right: 0;
+  @extend %mobile-nav-transition;
+}
+
 // Responsiveness
 @media (max-width: 767px) {
   header {
-    padding: 1.5rem;
+    padding: $space-lg;
 
     #header-container {
       .logo {
@@ -187,7 +182,7 @@ header {
     }
   }
 
-  #mobile-header {
+  #mobile-nav {
     display: block;
     position: fixed;
     top: 0;

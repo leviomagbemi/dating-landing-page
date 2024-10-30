@@ -51,12 +51,12 @@
       </div>
     </header>
 
-    <!--Mobile header-->
-    <div id="mobile-header" class="inactive">
-      <div>
+    <!--mobile nav-->
+    <nav id="mobile-nav" class="mobile-nav-inactive">
+      <div id="nav-header">
         <!--Logo-->
         <div class="logo">
-          <img src="/assets/icons/logo.png" alt="" />
+          <img src="/assets/icons/logo-colored.png" alt="" />
         </div>
 
         <div id="close-menu">
@@ -65,16 +65,13 @@
         </div>
       </div>
 
-      <!--mobile nav-->
-      <nav id="mobile-nav">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#get-started">Getting Started</a></li>
-          <li><a href="#footer">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#get-started">Getting Started</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
 
     <!--Page main content-->
     <main>
@@ -88,7 +85,7 @@
             here!
           </p>
 
-          <div id="hero-cta">
+          <div id="hero-cta" class="flex-container">
             <a href="#">
               <span class="icon"
                 ><img src="assets/icons/google-play.png" alt=""
@@ -108,9 +105,9 @@
 
       <!--Features-->
       <section id="features">
-        <h2>What Makes Us Different</h2>
+        <h2 class="section-heading">What Makes Us Different</h2>
 
-        <div id="features-container">
+        <div id="features-container" class="flex-container">
           <!--Feature-->
           <div class="card feature">
             <span class="icon"
@@ -153,9 +150,9 @@
 
       <!--Get Started-->
       <section id="get-started">
-        <h3>How It Works</h3>
+        <h3 class="section-heading">How It Works</h3>
 
-        <div id="steps-container">
+        <div id="steps-container" class="flex-container">
           <!--Step-->
           <div class="card step">
             <span class="icon"
