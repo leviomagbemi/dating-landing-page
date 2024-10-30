@@ -6,11 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -21,14 +21,18 @@
     <header>
       <div id="header-container">
         <!--Logo-->
-        <h1>Logo</h1>
+        <div class="logo">
+          <img src="/assets/icons/logo.png" alt="" />
+        </div>
 
         <!--Navigation menu-->
         <nav id="nav">
           <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#get-started">Getting Started</a></li>
+            <li>
+              <a href="#get-started">Getting Started</a>
+            </li>
             <li><a href="#footer">Contact</a></li>
           </ul>
         </nav>
@@ -50,7 +54,10 @@
     <!--Mobile header-->
     <div id="mobile-header" class="inactive">
       <div>
-        <h1>logo</h1>
+        <!--Logo-->
+        <div class="logo">
+          <img src="/assets/icons/logo.png" alt="" />
+        </div>
 
         <div id="close-menu">
           <span></span>
@@ -190,11 +197,13 @@
     </main>
 
     <!--Footer-->
-    <footer>
+    <footer id="footer">
       <div id="footer-container">
         <!-- Tag Section -->
         <div class="footer-tag">
-          <h1>Logo</h1>
+          <div class="logo">
+            <img src="/assets/icons/logo-colored.png" alt="" />
+          </div>
           <p>
             Connecting people and creating lasting <br />relationships around
             the world.
@@ -223,7 +232,9 @@
         <!-- Contact Section -->
         <div class="footer-contact">
           <h3>Contact Us</h3>
-          <p>Email: support@example.com</p>
+          <a href="mailto:support@example.com"
+            ><p>Email: support@example.com</p></a
+          >
           <p>Phone: +123 456 7890</p>
         </div>
       </div>

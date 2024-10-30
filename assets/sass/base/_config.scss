@@ -1,8 +1,10 @@
+@import "./variables";
+
 // CSS reset
 * {
   margin: 0;
   padding: 0;
-  line-height: 1.2;
+  line-height: 1.5;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
@@ -11,11 +13,12 @@
 
 body {
   position: relative;
+  background-color: $color-light;
 }
 
 // Font stacks
-$font-stack-body: "Lato", sans-serif; // Body font
-$font-stack-heading: "Playfair Display", serif; // Heading font
+$font-stack-body: "Poppins", sans-serif; // Body font
+$font-stack-heading: "Crimson Pro", serif; // Heading font
 
 body {
   font-family: $font-stack-body;

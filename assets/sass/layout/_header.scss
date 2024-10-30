@@ -1,5 +1,12 @@
+@import "../base/variables";
+
 header {
   padding: 1rem 2rem;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 
   // Header container
   #header-container {
@@ -9,27 +16,50 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    .logo {
+      width: 100px;
+    }
+
     // Nav
     #nav {
-      // padding-left: 1rem;
       ul {
         display: flex;
         gap: 1rem;
         justify-content: center;
+        background-color: rgba($color: $color-dark, $alpha: 0.3);
+
+        padding: 1rem;
+        border-radius: 1rem;
+
+        a {
+          color: $color-light;
+        }
+
+        a:hover {
+          font-weight: bold;
+          text-decoration: underline;
+        }
+
+        a.nav-active {
+          font-weight: bold;
+          text-decoration: underline;
+        }
       }
     }
 
     // Header CTA
     #header-cta {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-
       a {
-        background-color: black;
+        background-color: rgba($color: $color-dark, $alpha: 0.5);
         color: white;
         padding: 0.2rem 1rem;
         border-radius: 1rem;
+        transform: scale(1);
+        transition: transform 0.5s ease;
+      }
+
+      a:hover {
+        transform: scale(1.1);
       }
     }
   }
@@ -41,22 +71,24 @@ header {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: #000;
+  background-color: darken($color-secondary, 40%);
   color: #fff;
   padding: 3rem 2rem 0 2rem;
   position: absolute;
   top: 0;
 
-  h1 {
-    margin-bottom: 2rem;
-  }
-
   > div {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .logo {
+      width: 100px;
+    }
 
     #close-menu {
       background: none;
+      margin-top: 1rem;
 
       span {
         display: block;
@@ -83,11 +115,23 @@ header {
 
       a {
         color: #fff;
+        background-color: rgba($color: $color-light, $alpha: 0.3);
+        padding: 1rem;
+        border-radius: $radius;
+      }
+
+      a:hover {
+        background-color: rgba($color: $color-primary, $alpha: 0.5);
+      }
+
+      a.mobile-nav-active {
+        background-color: rgba($color: $color-primary, $alpha: 0.5);
       }
     }
   }
 }
 
+// Mobile header state
 .inactive {
   right: -100%;
   opacity: 1;
@@ -114,16 +158,21 @@ header {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: black;
+    background-color: $color-light;
     transition: 0.3s;
   }
 }
 
+// Responsiveness
 @media (max-width: 767px) {
   header {
     padding: 1.5rem;
 
     #header-container {
+      .logo {
+        width: 80px;
+      }
+
       #nav {
         display: none;
       }
@@ -140,5 +189,8 @@ header {
 
   #mobile-header {
     display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 }
