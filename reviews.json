@@ -1,0 +1,40 @@
+{
+  "reviews": [
+    {
+      "name": "EMILY JOHNSON",
+      "review": "I had a fantastic experience with Rosmon Romance. The platform is user-friendly, and I met some amazing people. Highly recommend!",
+      "rating": "4.0",
+      "image": "https://picsum.photos/300/200"
+    },
+    {
+      "name": "JAMES SMITH",
+      "review": "Rosmon Romance exceeded my expectations. The matchmaking algorithm is impressive, and I appreciate the thoughtful profiles and genuine connections.",
+      "rating": "4.0",
+      "image": "https://picsum.photos/300/200"
+    },
+    {
+      "name": "OLIVIA WILSON",
+      "review": "Rosman Romance made online dating enjoyable. The profiles are detailed, and the support team is responsive. It's been a great experience!",
+      "rating": "5.0",
+      "image": "https://picsum.photos/300/200"
+    },
+    {
+      "name": "SOPHIA DAVIS",
+      "review": "My time on Rosmon Romance has been wonderful. The platform is well-designed, and I've had meaningful interactions with like-minded individuals.",
+      "rating": "3.0",
+      "image": "https://picsum.photos/300/200"
+    },
+    {
+      "name": "MIA THOMAS",
+      "review": "I'm really impressed with Rosmon Romance. The app is smooth, the profiles are authentic and the matches I've had have been very compatible.",
+      "rating": "5.0",
+      "image": "https://picsum.photos/300/200"
+    },
+    {
+      "name": "LUCAS ANDERSON",
+      "review": "I am extremely happy with my experience on Rosmon Romance. The platform is beautifully designed and easy to navigate, making it simple to connect with potential matches. The depth of the profiles allows for meaningful interactions, and I've been impressed with the quality of the matches I've received.",
+      "rating": "5.0",
+      "image": "https://picsum.photos/300/200"
+    }
+  ]
+}

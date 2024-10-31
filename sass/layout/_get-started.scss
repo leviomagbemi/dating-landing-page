@@ -2,11 +2,15 @@
 
 #get-started {
   // Steps container
+  .section-heading {
+    color: $color-light;
+  }
+
+  background-color: darken($color-primary, 30%);
   #steps-container {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    .card {
+      background-color: $color-light;
+    }
 
     .step {
       opacity: 0;

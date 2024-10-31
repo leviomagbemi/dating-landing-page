@@ -1,0 +1,79 @@
+@import "../base/variables";
+
+#reviews {
+  #carousel-container {
+    max-width: 970px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #reviews-container {
+    display: flex;
+    justify-content: start;
+    gap: 24px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+
+    .review {
+      position: relative;
+      padding: $space-md;
+      min-width: 300px;
+      max-width: 300px;
+      border-radius: $radius;
+      user-select: none;
+      color: $color-text;
+      border: 2px solid rgba($color: $color-primary, $alpha: 0.2);
+      box-shadow: 0px 4px 8px rgba($color: $color-primary, $alpha: 0.2);
+      transform: translateX(0);
+      transition: transform 0.5s ease-out;
+
+      .quote {
+        position: absolute;
+        width: 50px;
+        right: 0;
+        top: 0px;
+        opacity: 0.5;
+      }
+    }
+
+    .avatar {
+      width: 100px;
+      margin: 0;
+
+      img {
+        border-radius: $radius;
+      }
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: $space-sm;
+      margin-top: -$space-sm;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      span {
+        width: 40px;
+      }
+    }
+
+    .review-text {
+      margin-top: $space-md;
+      p {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  #carousel-container {
+    width: 300px;
+  }
+}

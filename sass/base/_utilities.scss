@@ -1,17 +1,19 @@
 @import "variables";
 
 .section-heading {
-  margin-bottom: $space-lg;
-  color: $color-text;
+  margin-bottom: 48px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 32px;
+  color: $color-text;
 }
 
 .flex-container {
   display: flex;
-  gap: 1.5rem;
+  gap: $space-lg;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 1170px;
+  margin: auto;
 }
 
 %active-mobile-link {
@@ -20,7 +22,6 @@
 
 %active-link {
   font-weight: bold;
-  text-decoration: underline;
 }
 
 .logo {
@@ -29,4 +30,10 @@
 
 %mobile-nav-transition {
   transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+@media only screen and (max-width: 567px) {
+  .section-heading {
+    font-size: 28px;
+  }
 }

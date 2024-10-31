@@ -45,7 +45,7 @@ function setActiveLink() {
 // ===== INTERSECTION OBSERVERS =====
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Set initial active link
+  // // Set initial active link
   window.location.hash = "#hero";
 
   const observerOptions = { root: null, threshold: 0.5 };

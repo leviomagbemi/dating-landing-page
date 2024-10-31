@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+
     <title>Dating Landing Page</title>
   </head>
   <body>
@@ -31,7 +32,7 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="#features">Features</a></li>
             <li>
-              <a href="#get-started">Getting Started</a>
+              <a href="#get-started">Get Started</a>
             </li>
             <li><a href="#footer">Contact</a></li>
           </ul>
@@ -81,23 +82,24 @@
           <h1>Find Your Perfect Match</h1>
           <p>
             Meet new people and build lasting relationships. Wherever you are,
-            love is just a swipe away. <br />Join millions who’ve found love
-            here!
+            love is just a swipe away. Join millions who’ve found love here!
           </p>
 
-          <div id="hero-cta" class="flex-container">
-            <a href="#">
-              <span class="icon"
-                ><img src="assets/icons/google-play.png" alt=""
-              /></span>
-              Available on Android
+          <div id="cta-buttons">
+            <a href="#" class="cta-button google-play">
+              <img src="assets/icons/google-play.png" alt="Google Play Icon" />
+              <div class="button-text">
+                <span>GET IT ON</span>
+                <h3>Google Play</h3>
+              </div>
             </a>
 
-            <a href="#">
-              <span class="icon"
-                ><img src="assets/icons/apple.png" alt=""
-              /></span>
-              Available on iOS
+            <a href="" class="cta-button app-store">
+              <img src="assets/icons/apple.png" alt="Apple Store Icon" />
+              <div class="button-text">
+                <span>Download on the</span>
+                <h3>App Store</h3>
+              </div>
             </a>
           </div>
         </div>
@@ -150,7 +152,7 @@
 
       <!--Get Started-->
       <section id="get-started">
-        <h3 class="section-heading">How It Works</h3>
+        <h2 class="section-heading">How It Works</h2>
 
         <div id="steps-container" class="flex-container">
           <!--Step-->
@@ -189,6 +191,15 @@
               date right from the app!
             </p>
           </div>
+        </div>
+      </section>
+
+      <!--Review-->
+      <section id="reviews">
+        <h2 class="section-heading">Testimonials!</h2>
+
+        <div id="carousel-container">
+          <div id="reviews-container"></div>
         </div>
       </section>
     </main>
@@ -241,6 +252,7 @@
       </div>
     </footer>
 
-    <script type="module" src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/carousel.js"></script>
   </body>
 </html>

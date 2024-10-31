@@ -24,6 +24,11 @@ body {
   font-family: $font-stack-body;
 }
 
+p,
+a {
+  font-size: 18px;
+}
+
 h1,
 h2,
 h3,
@@ -31,6 +36,7 @@ h4,
 h5,
 h6 {
   font-family: $font-stack-heading;
+  line-height: normal;
 }
 
 // Anchor tags
@@ -42,8 +48,6 @@ a {
 // Sections
 section:not(#hero) {
   padding: $space-xl 0;
-  max-width: 1170px;
-  margin: auto;
 }
 
 // Images

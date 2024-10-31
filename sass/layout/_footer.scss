@@ -27,7 +27,7 @@ footer {
 
       .footer-socials {
         display: flex;
-        gap: 1rem;
+        gap: $space-md;
         color: $color-light;
 
         a {
@@ -46,7 +46,7 @@ footer {
       ul {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: $space-md;
 
         a {
           color: $color-light;
@@ -84,7 +84,7 @@ footer {
   }
 }
 
-@media (max-width: 540px) {
+@media only screen and (max-width: 540px) {
   #footer-container {
     flex-direction: column;
   }

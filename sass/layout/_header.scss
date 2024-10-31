@@ -17,10 +17,6 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    .logo {
-      width: 100px;
-    }
-
     // Main nav
     #nav {
       ul {
@@ -71,7 +67,7 @@ header {
   height: 100%;
   z-index: 1;
   background-color: darken($color-secondary, 40%);
-  color: #fff;
+  color: $color-light;
   padding: 3rem 2rem 0 2rem;
   position: absolute;
   top: 0;
@@ -88,7 +84,7 @@ header {
 
       span {
         display: block;
-        background-color: #fff;
+        background-color: $color-light;
         width: 25px;
         height: 3px;
       }
@@ -159,7 +155,7 @@ header {
 }
 
 // Responsiveness
-@media (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   header {
     padding: $space-lg;
 
