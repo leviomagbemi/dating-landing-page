@@ -1,27 +1,91 @@
 @import "../base/variables";
 
 #get-started {
-  // Steps container
-  .section-heading {
-    color: $color-light;
+  background-color: lighten($color-primary, 33%);
+
+  #get-started-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1170px;
+    gap: $space-lg;
+    padding: 0 $space-lg;
+    margin: auto;
+
+    > div {
+      width: 100%;
+
+      img {
+        border-radius: $radius;
+      }
+    }
   }
 
-  background-color: darken($color-primary, 30%);
-  #steps-container {
-    .card {
-      background-color: $color-light;
-    }
+  // Steps container
+  .section-heading {
+    color: $color-text;
+  }
 
+  #steps-container {
     .step {
+      display: flex;
+      gap: $space-md;
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.5s ease, transform 0.5s ease;
+
+      .step-icon {
+        width: 60px;
+        height: 60px;
+        margin: auto;
+        background-color: $color-primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $space-sm;
+
+        img {
+          width: 30px;
+        }
+      }
+
+      div:last-child {
+        h4 {
+          margin-bottom: $space-md;
+          font-size: 18px;
+        }
+
+        padding: $space-md;
+        border-radius: $radius;
+        border: 2px solid rgba($color: $color-primary, $alpha: 0.2);
+        box-shadow: 0px 4px 8px rgba($color: $color-primary, $alpha: 0.2);
+        color: $color-text;
+        background-color: $color-light;
+      }
     }
 
     // Active state: fully visible
     .step.visible {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  #get-started-container {
+    flex-direction: column;
+    padding: $space-md;
+    > div {
+      width: 300px;
+    }
+  }
+
+  .step {
+    .step-icon {
+      width: 40px;
+      height: 40px;
     }
   }
 }

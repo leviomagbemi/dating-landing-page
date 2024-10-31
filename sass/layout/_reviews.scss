@@ -11,9 +11,10 @@
   #reviews-container {
     display: flex;
     justify-content: start;
-    gap: 24px;
+    gap: $space-lg;
     transition: transform 0.5s ease;
     will-change: transform;
+    padding: $space-md 0;
 
     .review {
       position: relative;
@@ -32,7 +33,7 @@
         position: absolute;
         width: 50px;
         right: 0;
-        top: 0px;
+        top: -20px;
         opacity: 0.5;
       }
     }
