@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Create the main review container
         const reviewDiv = document.createElement("div");
         reviewDiv.classList.add("review");
-        reviewDiv.style.maxWidth = "300px";
-        reviewDiv.style.minWidth = "300px";
 
         // Create the quote container
         const quoteDiv = document.createElement("div");
@@ -82,6 +80,12 @@ setTimeout(() => {
 
   // Clone first 3 and last 3 cards
   if (cards.length !== 0) {
+    cards.forEach((card) => {
+      card.style.width = "300px";
+      card.style.minWidth = "300px";
+      card.style.maxWidth = "300px";
+    });
+
     const firstClones = cards.slice(0, 3).map((card) => card.cloneNode(true));
     const lastClones = cards.slice(-3).map((card) => card.cloneNode(true));
 

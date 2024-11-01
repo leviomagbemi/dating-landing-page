@@ -78,6 +78,9 @@
     flex-direction: column;
     padding: $space-md;
     > div {
+      h2 {
+        font-size: 24px;
+      }
       width: 300px;
     }
   }
