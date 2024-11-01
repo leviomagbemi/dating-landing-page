@@ -10,6 +10,7 @@
 
   #reviews-container {
     display: flex;
+    width: 100%;
     justify-content: start;
     gap: $space-lg;
     transition: transform 0.5s ease;

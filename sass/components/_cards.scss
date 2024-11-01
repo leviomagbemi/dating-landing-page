@@ -3,8 +3,8 @@
 // Cards
 .card {
   text-align: center;
-  min-width: 300px;
-  max-width: 300px;
+  // flex: 1 1 300px;
+  width: 300px;
   padding: $space-md;
   border-radius: $radius;
   border: 2px solid rgba($color: $color-primary, $alpha: 0.2);
