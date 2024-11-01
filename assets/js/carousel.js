@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Create the main review container
         const reviewDiv = document.createElement("div");
         reviewDiv.classList.add("review");
+        reviewDiv.style.maxWidth = "300px";
+        reviewDiv.style.minWidth = "300px";
 
         // Create the quote container
         const quoteDiv = document.createElement("div");
