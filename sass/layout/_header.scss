@@ -2,9 +2,9 @@
 @import "../base/utilities";
 
 header {
-  padding: $space-md $space-lg;
-  background: transparent;
-  position: absolute;
+  padding: $space-sm $space-md;
+  background: darken(rgba($color: $color-secondary, $alpha: 0.7), 40%);
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -23,7 +23,6 @@ header {
         display: flex;
         gap: 1rem;
         justify-content: center;
-        background-color: rgba($color: $color-dark, $alpha: 0.3);
 
         padding: $space-md;
         border-radius: $radius;
@@ -45,7 +44,7 @@ header {
     // Header CTA
     #header-cta {
       a {
-        background-color: rgba($color: $color-dark, $alpha: 0.3);
+        background-color: $color-primary;
         color: white;
         padding: $space-xs $space-md;
         border-radius: $radius;
