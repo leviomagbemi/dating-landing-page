@@ -1,5 +1,5 @@
 const slider = document.querySelector("#reviews-container");
-let cardWidth = 324; // card width + margin
+let cardWidth = 322; // card width + margin
 let cards;
 
 document.addEventListener("DOMContentLoaded", () => {

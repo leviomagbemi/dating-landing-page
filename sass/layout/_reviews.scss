@@ -2,13 +2,14 @@
 
 #reviews {
   #carousel-container {
-    width: 972px;
+    max-width: 972px;
     margin: auto;
     overflow: hidden;
     position: relative;
   }
 
   #reviews-container {
+    max-width: 972px;
     display: flex;
     justify-content: start;
     gap: $space-lg;
@@ -75,6 +76,6 @@
 
 @media only screen and (max-width: 567px) {
   #carousel-container {
-    width: 300px;
+    width: 324px;
   }
 }
