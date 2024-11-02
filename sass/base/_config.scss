@@ -24,6 +24,10 @@ body {
   font-family: $font-stack-body;
 }
 
+a {
+  cursor: pointer;
+}
+
 p,
 a {
   font-size: 18px;

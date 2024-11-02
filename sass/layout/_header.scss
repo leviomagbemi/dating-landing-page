@@ -108,6 +108,7 @@ header {
       background-color: rgba($color: $color-light, $alpha: 0.3);
       padding: 1rem;
       border-radius: $radius;
+      cursor: pointer;
     }
 
     a:hover {

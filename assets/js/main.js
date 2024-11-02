@@ -24,29 +24,47 @@ function selectMultipleElement(elements) {
 }
 
 // Function to set the active link based on the current URL hash
-function setActiveLink() {
-  const currentHash = window.location.hash;
-
+function setActiveLink(currentHash) {
   navLinks.forEach((link) => {
     link.classList.remove("nav-active");
-    if (link.getAttribute("href") === currentHash) {
+    if (link.getAttribute("data-section") === currentHash) {
       link.classList.add("nav-active");
     }
   });
 
   mobileNavLinks.forEach((link) => {
     link.classList.remove("mobile-navlink-active");
-    if (link.getAttribute("href") === currentHash) {
+    if (link.getAttribute("data-section") === currentHash) {
       link.classList.add("mobile-navlink-active");
     }
   });
 }
 
+// Scroll smoothly to the target section
+function scrollToSection(targetId) {
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    setActiveLink(targetId); // Set the active link visually
+  }
+}
+
+// ===== EVENT LISTENERS =====
+
+// Attach click event to nav links and mobile nav links
+[...navLinks, ...mobileNavLinks].forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const targetId = link.dataset.section;
+    scrollToSection(targetId);
+  });
+});
+
 // ===== INTERSECTION OBSERVERS =====
 
 document.addEventListener("DOMContentLoaded", function () {
   // // Set initial active link
-  window.location.hash = "#hero";
+  // window.location.hash = "#hero";
 
   const observerOptions = { root: null, threshold: 0.5 };
 
@@ -71,7 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          window.location.hash = entry.target.id;
+          // Set active link based on section in view
+          setActiveLink(entry.target.id);
         }
       });
     },
@@ -117,7 +136,3 @@ footerSocials.forEach((icon) => {
     icon.setAttribute("src", newAttribute);
   });
 });
-
-// ===== INITIAL SETUP =====
-setActiveLink();
-window.addEventListener("hashchange", setActiveLink);
