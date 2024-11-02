@@ -2,6 +2,7 @@ const slider = document.querySelector("#reviews-container");
 let cardWidth = 322; // card width + margin
 let cards;
 
+// Deleted JSON file and added reviews directly
 const reviews = [
   {
     name: "EMILY JOHNSON",
